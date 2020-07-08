@@ -1,0 +1,147 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{% endblock %}
+
+{% block body %}
+
+
+	<div class="row w-100">
+		<div class="col-8">
+			<br/>
+
+			<div class="card text-white bg-primary mb-3">
+				<div class="card-body">
+					<h2 class="card-title">News and events</h2>
+				</div>
+			</div>
+
+
+			<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+				<ol class="carousel-indicators">
+					<li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+					<li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+					<li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+					<li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
+				</ol>
+
+				<div
+					class="carousel-inner">
+
+					<!-- first -->
+					<div class="carousel-item active">
+						<div class="row">
+							<div class="col-3 overflow-hidden">
+								<img src="../pictures/HeadBasel.jpg" alt="Card image cap">
+							</div>
+							<div class="col-9 bg-primary text-light">
+								<h4>Card title1</h4>
+								<p>Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+							</div>
+						</div>
+					</div>
+
+					<!-- second -->
+					<div class="carousel-item">
+						<div class="row">
+							<div class="col-3 overflow-hidden">
+								<img src="../pictures/HeadBasel.jpg" alt="Card image cap">
+							</div>
+							<div class="col-9 bg-primary text-light">
+								<h4>Card title2</h4>
+								<p>Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+							</div>
+						</div>
+					</div>
+
+					<!-- third -->
+					<div class="carousel-item">
+						<div class="row">
+							<div class="col-3 overflow-hidden">
+								<img src="../pictures/HeadBasel.jpg" alt="Card image cap">
+							</div>
+							<div class="col-9 bg-primary text-light">
+								<h4>Card title3</h4>
+								<p>Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+							</div>
+						</div>
+					</div>
+
+
+					<!-- four -->
+					<div class="carousel-item">
+						<div class="row">
+							<div class="col-3 overflow-hidden">
+								<img src="../pictures/HeadBasel.jpg" alt="Card image cap">
+							</div>
+							<div class="col-9 bg-primary text-light">
+								<h4>Card title4</h4>
+								<p>Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+							</div>
+						</div>
+					</div>
+
+				</div>
+
+				<a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+					<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+					<span class="sr-only">Previous</span>
+				</a>
+				<a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+					<span class="carousel-control-next-icon text-primary" aria-hidden="true"></span>
+					<span class="sr-only">Next</span>
+				</a>
+
+			</div>
+
+			<br/>
+
+			<div class="card text-white bg-primary mb-3">
+				<div class="card-body">
+					<h2 class="card-title"></h2>
+				</div>
+			</div>
+		</div>
+
+
+		<div class="col-4">
+			<br/>
+			<div class="card card-meteo">
+				<div class="card-body">
+
+					<div class="row ">
+						<div class="col-6">
+							<div>
+								<h3 class="card-title">Current weather in Basel
+								</h3>
+							</div>
+							<p class="card-text">Lowest temperature :
+								{{value.temp_min}}
+								degrees Celsius</p>
+							<p class="card-text">Highest temperature :
+								{{value.temp_max}}
+								degrees Celsius</p>
+							<p class="card-text">Pressure :
+								{{value.pressure}}
+								hPa</p>
+							<p class="card-text">Humidity :
+								{{value.humidity}}
+								%</p>
+							<p class="card-text">Wind speed :
+								{{value.speed}}
+								m/s</p>
+
+						</div>
+						<div class="col-6">
+							<div class="text-center">
+								<img style="height:120px" src="http://openweathermap.org/img/wn/{{ value.icon }}@2x.png" alt="">
+								<p style="font-size:20px">{{value.descrip}}</p>
+								<p style="font-size:30px">{{ value.temp }}
+									°C</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+{% endblock %}

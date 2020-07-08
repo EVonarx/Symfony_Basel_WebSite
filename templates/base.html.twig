@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+
+		<title>
+			{% block title %}
+				Basel website
+			{% endblock %}
+		</title>
+		{% block stylesheets %}
+			<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+			<link rel="stylesheet" href="https://bootswatch.com/4/flatly/bootstrap.min.css">
+			<link rel="stylesheet" href="/css/basel.css">
+		{% endblock %}
+	</head>
+	<body>
+
+		<div class="centerPicture">Welcome to the Basel website</div>
+
+		<nav
+			class="navbar navbar-expand-lg navbar-light bg-light">
+			<!--
+																																		<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+																															
+																																			<a class="navbar-brand" href="/home">HOME</a>
+																															
+																															
+																																			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+																																				<span class="navbar-toggler-icon"></span>
+																																			</button>
+																															-->
+			<div class="collapse navbar-collapse" id="navbarColor03">
+				<ul class="navbar-nav mr-auto">
+
+
+					<li class="nav-item">
+						<div class="smallSpaceBetweenButton">
+							<button type="button" class="btn btn-warning">
+								<a class="nav-link" href="/home">
+									<div class="fontBlackBold">
+										HOME
+									</div>
+								</a>
+							</button>
+						</div>
+					</li>
+
+
+					<li class="nav-item">
+						<div class="smallSpaceBetweenButton">
+							<button type="button" class="btn btn-warning">
+								<a class="nav-link" href="/news">
+									<div class="fontBlackBold">
+										NEWS
+									</div>
+								</a>
+							</button>
+						</div>
+					</li>
+
+					<li class="nav-item">
+						<div class="largeSpaceBetweenButton">
+							<button type="button" class="btn btn-warning">
+								<a class="nav-link" href="/events">
+									<div class="fontBlackBold">
+										EVENTS
+									</div>
+								</a>
+							</button>
+						</div>
+					</li>
+
+
+					<li class="nav-item">
+						<div class="rightSpaceBetweenButton2">
+							<button type="button" class="btn btn-warning">
+								<a class="nav-link" href="/history">
+									<div class="fontBlackBold">
+										HISTORY
+									</div>
+								</a>
+							</button>
+						</div>
+					</li>
+
+					<li class="nav-item">
+						<div class="rightSpaceBetweenButton1">
+							<button type="button" class="btn btn-warning">
+								<a class="nav-link" href="/contact">
+									<div class="fontBlackBold">
+										CONTACT
+									</div>
+								</a>
+							</button>
+						</div>
+					</li>
+
+
+				</ul>
+			</div>
+		</nav>
+
+		<div class="container-fluid"> {% block body %}{% endblock %}
+			</div>
+			{% block javascripts %}
+				<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+				<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+				<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>	
+			{% endblock %}
+		</body>
+	</html>
